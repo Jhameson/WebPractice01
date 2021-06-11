@@ -1,0 +1,167 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #242424 ;
+}
+
+#main-title{
+    font-size: 50px;
+    font-weight: 900;
+    margin: 30px 0 60px 0 ;
+}
+
+.form{
+   
+    padding: 10px 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form input{
+    padding: 1px 1px 1px 10px;
+    border-radius: 4px;
+    border: none;
+    
+    min-width: 100px;
+    height: 30px;
+    border: 1px solid rgb(206, 206, 206);
+}
+.form label{
+    margin-top: 20px;
+}
+
+.buttons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.form button{
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase ;
+    width: 80px;
+    background: #04df46;
+}
+
+.form button:hover{
+    background-color: #242424;
+    color: #fff;
+}
+
+
+.container{
+    text-transform: uppercase ;
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+    width: 900px;
+    background-color: #04df46;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 2px #000000;
+    
+}
+
+
+/*LIST ITENS*/
+
+.list{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+
+.box{
+    border: 1px solid;
+    margin-top: 50px;
+    width: 100%;
+    background: rgb(206, 205, 203);
+}
+
+.box img{
+    width: 50%;
+}
+
+.description-item{
+    display: flex;
+    justify-content: space-between;
+   padding: 10px;
+}
+
+.description-item div{
+    display: flex;
+    flex-direction: column;
+
+}
+.description-item div span{
+    margin: 10px 5px 5px 5px;    
+}
+.list-item{
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid;
+}
+
+.inter-container{
+    display: flex;
+    flex-direction: row;
+    
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgb(30, 82, 54);
+  
+}
+.inter-container div{
+    padding: 10px;
+  
+}
+
+#camp1{
+    background: rgb(200, 207, 202);
+    width: 30%;
+    border-radius: 10px 0 0 10px;
+    text-transform: none;
+}
+#camp2{
+    background: #ebebeb;
+    width: 70%;
+    border-radius: 0 10px  10px 0;
+}
+
+#camp2 h1{
+    display: flex;
+    justify-content: center;
+    
+}
+input::placeholder{
+    font-style: italic;
+}
+
+.adverts{
+    font-size: 40px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.list-title{
+    display: flex;
+    justify-content: center;
+}
