@@ -11,58 +11,62 @@
 
 <body>
     <section class="container">
-        <a id="main-title">JR Propriedades</a>
+
+        <a id="main-title">JR Propriedades </a>
         <div class="inter-container">
             <div id="camp1">
                 <h1>Sobre</h1>
                 <span>Developed by:</span><br><br>
                 <span><b>Jhameson Lucas </b>- SpaceX Senior Developer</span><br><br>
                 <span><b>Raynara Martins </b>- Microsoft Qa Tester</span>
+                <img src="assets/img/logo0.png" class="logo-img" />
             </div>
             <div id="camp2">
                 <h1>Formulário</h1>
                 <form class="form" action="" method="get">
-                    <label>title:</label>
-                    <input type="text" class="title" placeholder="Ex.: Excellent house in ..." />
+                    <label>título:</label>
+                    <input type="text" class="title" maxlength="90" placeholder="Ex.: Execelente casa em ..." />
 
-                    <label>description:</label>
-                    <input type="text" class="description" placeholder="Ex.: A nice house, big, comfortable..." />
+                    <label>Descrição:</label>
+                    <input type="text" maxlength="100" class="description" placeholder="Ex.: Uma boa casa, confortável..." />
 
-                    <label>Rooms:</label>
-                    <input type="number" class="rooms" placeholder="Ex.: 4" />
+                    <label>Quartos:</label>
+                    <input type="number" class="rooms" placeholder="Ex.: 5" />
 
-                    <label>Parking spaces:</label>
-                    <input type="number" class="parking" placeholder="Ex.: 5" />
+                    <label>vagas na garagem:</label>
+                    <input type="number" class="parking" placeholder="Ex.: 6" />
 
-                    <label>total area (m2):</label>
+                    <label>Área total (m2):</label>
                     <input type="number" class="total-area" placeholder="Ex.: 2000" />
 
-                    <label>BUILDING AREA (m2):</label>
+                    <label>Área construída(m2):</label>
                     <input type="number" class="building" placeholder="Ex.: 1100" />
 
-                    <label>LOCALIty:</label>
-                    <input type="text" class="locality" placeholder="Ex.: New York/EUA" />
+                    <label>localidade:</label>
+                    <input type="text" class="locality" placeholder="Ex.: Crateús/CE" />
 
-                    <label>Price $:</label>
+                    <label>Preço $:</label>
                     <input type="number" class="price" placeholder="Ex.: 50000" />
 
-                    <label>Image (URL):</label>
-                    <input type="url" class="link" placeholder="Ex.: https://www.example.com/imagem.jpg" />
+                    <label>Imagem (URL):</label>
+                    <input type="url" class="link" placeholder="Ex.: https://www.exemplo.com/imagem.jpg" />
                     <div class="buttons">
                         <button>Inserir</button>
-                        <button>Limpar</button>
+                        <button type="button" onclick="limpar()">Limpar</button>
                     </div>
                 </form>
             </div>
         </div>
+
     </section>
-    <span class="adverts"></span>
+    <span class="adverts">0 Anúncios</span>
 
     <div class="list">
-        
+
     </div>
 
     <script src="assets/js/script.js"></script>
+    <script type="text/javascript" src="http://cidades-estados-js.googlecode.com/files/cidades-estados-v0.2.js"></script>
 </body>
 
 </html>
