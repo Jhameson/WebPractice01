@@ -69,11 +69,3 @@ function limpar() {
     clean.innerHTML = '';
     contador.innerHTML = '0 Anúncios'
 }
-
-window.onload = function() {
-    new dgCidadesEstados(
-        document.getElementById('estado'),
-        document.getElementById('cidade'),
-        true
-    );
-}
