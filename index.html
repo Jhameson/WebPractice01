@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/main.css" rel="stylesheet">
+    
     <title>WEB 01</title>
 </head>
 
@@ -23,7 +24,7 @@
             </div>
             <div id="camp2">
                 <h1>Formulário</h1>
-                <form class="form" action="" method="get">
+                <form class="form" action="" method="POST">
                     <label>título:</label>
                     <input type="text" class="title" maxlength="90" placeholder="Ex.: Execelente casa em ..." />
 
@@ -52,8 +53,8 @@
                     <label>Imagem (URL):</label>
                     <input type="url" class="link" placeholder="Ex.: https://www.exemplo.com/imagem.jpg" />
                     <div class="buttons">
-                        <button>Inserir</button>
-                        <button type="button" onclick="limpar()">Limpar</button>
+                        <input type="submit" value="Inserir" class="btns">
+                        <input type="reset" value="Limpar" class="btns">
                     </div>
                 </form>
             </div>

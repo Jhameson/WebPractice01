@@ -5,6 +5,7 @@ const form = document.querySelector('.form');
 const result = document.querySelector('.list');
 const contador = document.querySelector('.adverts');
 
+const teste = document.querySelector('.teste');
 //array de propriedades
 const properties = [];
 
@@ -37,7 +38,7 @@ form.addEventListener('submit', function recebeEventoForm(event) {
     })
 
     alert("Dados inseridos");
-
+    
     result.innerHTML +=
         `
        <div class="box">
