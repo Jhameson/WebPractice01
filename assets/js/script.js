@@ -5,7 +5,6 @@ const form = document.querySelector('.form');
 const result = document.querySelector('.list');
 const contador = document.querySelector('.adverts');
 
-const teste = document.querySelector('.teste');
 //array de propriedades
 const properties = [];
 
@@ -62,11 +61,11 @@ form.addEventListener('submit', function recebeEventoForm(event) {
 });
 
 
-function limpar() {
-    while (properties.length > 0) {
-        properties.pop();
-    }
-    const clean = document.querySelector('.list');
-    clean.innerHTML = '';
-    contador.innerHTML = '0 Anúncios'
-}
+// function limpar() {
+//     while (properties.length > 0) {
+//         properties.pop();
+//     }
+//     const clean = document.querySelector('.list');
+//     clean.innerHTML = '';
+//     contador.innerHTML = '0 Anúncios'
+// }
