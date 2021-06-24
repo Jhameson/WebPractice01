@@ -1,187 +1,94 @@
 :root {
-    --primary-color: rgb(65, 218, 136);
-    --primary-color-dark: rgb(49, 165, 88);
-    --back-color: rgb(51, 43, 43);
+
+    --primary-color-darker: #2E2D30;
+    --primary-color-light: #61495A;
+
+    --font-color-darker: #121213;
+    --font-color-light: #f1ecf0;
 }
 
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: var(--back-color);
-}
+
 
 h1 {
-    color: var(--back-color);
+    color: var(--primary-color-darker);
 }
 
-.container {
-    text-transform: uppercase;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 50px auto;
-    width: 70%;
-    background-color: var(--primary-color);
-    
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px 2px #000000;
+/* Gerais */
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
-.logo-img {
-    margin: auto;
-    width: 90%;
+.row{
+    margin: 0;
 }
 
-#main-title {
-    font-size: 70px;
-    font-weight: 900;
-    margin: 30px 0 60px 0;
-    color: var(--back-color);
+.container{
+    padding: 70px 0;
 }
 
-.inter-container {
-    display: flex;
-    flex-direction: row;
-    min-width: 400px;
-    width: 100%;
-    border-radius: 10px;
+p, li{
+    color: var(--font-color-darker);
+    font-size: 14px;
 }
 
-.inter-container div {
-    padding: 10px;
+/* Barra de navegação */
+
+header, .navbar{
+    background-color: var(--primary-color-darker);
 }
 
-#camp1 {
-    background: rgb(200, 207, 202);
-    width: 30%;
-    border-radius: 10px 0 0 10px;
-    text-transform: none;
-    display: flex;
-    flex-direction: column;
+#nav-container{
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
-#camp2 {
-    background: #ebebeb;
-    width: 70%;
-    border-radius: 0 10px 10px 0;
+#logo{
+    width: 110px;
 }
 
-#camp2 h1 {
-    display: flex;
-    justify-content: center;
+.navbar-brand{
+    padding: 0;
+    color: var(--font-color-light);
 }
 
-input::placeholder {
-    font-style: italic;
+.navbar-brand:hover{
+    color: var(--font-color-light);
 }
 
-
-/*FORMULÁRIO*/
-
-.form {
-    padding: 10px 40px 0 40px;
-    display: flex;
-    flex-direction: column;
+#navbar-links a{
+    color: var(--font-color-light);
 }
 
-.form input {
-    padding: 2px 2px 2px 10px;
-    border-radius: 5px;
-    border: none;
-    min-width: 200px;
-    height: 30px;
-    border: 1px solid rgb(206, 206, 206);
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 1rem .8rem;
 }
 
-.form label {
-    margin-top: 20px;
+/* anuncuie aqui */
+
+#about-area{
+    background-color: #f9f9f9;
 }
 
-.buttons {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.btns {
-    font-weight: bold;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    width: 100px;
-    background: var(--primary-color-dark);
-    transition: 0.1s;
-}
-
-.btns:hover {
-    background-color: var(--back-color);
-    color: #fff;
-}
-
-
-/*LIST ITENS*/
-
-.list {
-    margin: 50px auto;
-    max-width: 800px;
-}
-
-.box {
-    border-radius: 10px;
-    border: 1px solid;
-    margin-top: 50px;
-    width: 100%;
-    background: rgb(206, 205, 203);
-}
-
-.box img {
-    width: 70%;
-}
-
-.description-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.description-item div {
-    display: flex;
-    flex-direction: column;
-}
-
-span {
-    word-wrap: break-word;
-}
-
-.description-item div span {
-    margin: 10px 5px 5px 5px;
-}
-
-.list-item {
-    width: 100%;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid;
-}
-
-.adverts {
-    margin-top: 100px;
+.main-title{
+    color: #444;
+    margin: 0 0 65px 0;
     font-size: 40px;
-    color: #fff;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
-.list-title {
-    display: flex;
-    justify-content: center;
+.about-title{
+    font-size: 17px;
+    color: #444;
+    text-transform: uppercase;
+    font-weight: bold;
 }
+
+#about-list{
+    list-style: none;
+    padding-left: 0;
+}
+
+#about-list li{
+    line-height: 30px;
+}
+
