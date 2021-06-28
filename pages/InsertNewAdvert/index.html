@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JR Propriedades</title>
+
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    
+</head>
+
+<body class="gray-200">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../../index.html">
+                    <img src="../../assets/img/logo0.png" alt="" width="30" height="24"
+                        class="d-inline-block align-text-top">
+                    JR Propriedades
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Divulgue</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../Adverts/index.html">Anúncios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../About/index.html">Sobre</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="container ">
+        <div class="row mt-5">
+            <div class="col-12 text-center border-bottom">
+                <h1 class="p-2">JR Propriedades</h1>
+
+            </div>
+        </div>
+        <div class="row mt-2 mb-5 " >
+            <div class="col-12 text-center">
+                <h2>Anuncie Aqui</h2>
+            </div>
+
+            <form class="row g-3 form " id="div-anuncios">
+                <div class="col-12 ">
+                    <label class="form-label">Título: </label>
+                    <input required type="text" class="form-control a-titulo" placeholder="Ex.: Casa Grande para venda"
+                        v-model="KeyAnuncio.titulo">
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Descrição:</label>
+                    <input required type="text" class="form-control a-descricao"
+                        placeholder="Ex.: Execelente e ventilada casa..." v-model="KeyAnuncio.descricao">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label ">Quartos: </label>
+                    <input required type="number" class="form-control a-rooms" placeholder="Ex.: 4"
+                        v-model="KeyAnuncio.quartos">
+                </div>
+                <div class="col-md-3">
+                    <label for="inputAddress2" class="form-label ">Vagas na garagem: </label>
+                    <input required type="number" class="form-control a-parking" placeholder="Ex.: 5"
+                        v-model="KeyAnuncio.vagas">
+                </div>
+                <div class="col-md-3">
+                    <label for="inputCity" class="form-label ">Área Total (m2):</label>
+                    <input required type="number" class="form-control a-total-area" placeholder="Ex.: 2000"
+                        v-model="KeyAnuncio.area">
+                </div>
+                <div class="col-md-3">
+                    <label for="inputCity" class="form-label ">Área Construída:</label>
+                    <input required type="number" class="form-control a-building" placeholder="Ex.: 1800"
+                        v-model="KeyAnuncio.construida">
+                </div>
+                <div class="col-12">
+                    <label for="inputCity" class="form-label ">Localidade:</label>
+                    <input required class="form-control a-locality" placeholder="Ex.: Rua Seu joão"
+                        v-model="KeyAnuncio.localidade">
+                </div>
+                <div class="col-sm-6">
+                    <label for="inputCity" class="form-label ">Preço (R$):</label>
+                    <input required type="number" class="form-control a-price" placeholder="Ex.: 2500"
+                        v-model="KeyAnuncio.preco">
+                </div>
+                <div class="col-sm-6">
+                    <label for="inputCity" class="form-label ">Imagem:</label>
+                    <input required type="url" class="form-control a-link"
+                     placeholder="Ex.: link.com" v-model="KeyAnuncio.img" min="1">
+                </div>
+                <div class="col-12 d-flex justify-content-center mt-5">
+                    <input type="reset" class="btn btn-secondary btn-lg btn-enviar m-2" value="Limpar Campos"/>
+                    <input class="btn btn-primary btn-lg btn-enviar m-2" type="submit"
+                        v-on:click="salvarAnuncio(KeyAnuncio)" value="Salvar Anuncio" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="../../assets/js/bootstrap.bundle.min.js" ></script>
+    <script src="../../assets/js/bootstrap.min.js" ></script>
+
+    <script src="../../assets/js/vue.js"></script>
+    
+</body>
+
+</html>

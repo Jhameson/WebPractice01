@@ -2,71 +2,62 @@
 <html lang="pt-br">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/css/main.css" rel="stylesheet">
+
+    <title>JR Propriedades</title>
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="../../assets/css/style.css" rel="stylesheet">
     
-    <title>WEB 01</title>
 </head>
 
-<body>
-    <section class="container">
-
-        <a id="main-title">JR Propriedades </a>
-        <div class="inter-container">
-            <div id="camp1">
-                <h1>Sobre</h1>
-                <span>Developed by:</span><br><br>
-                <span><b>Jhameson Lucas </b>- SpaceX Senior Developer</span><br><br>
-                <span><b>Raynara Martins </b>- Microsoft Qa Tester</span>
-                <img src="assets/img/logo0.png" class="logo-img" />
+<body class="gray-200">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/logo0.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    JR Propriedades
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="pages/InsertNewAdvert/index.html">Divulgue</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="pages/Adverts/index.html">Anúncios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="pages/About/index.html">Sobre</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div id="camp2">
-                <h1>Formulário</h1>
-                <form class="form" action="" method="POST">
-                    <label>título:</label>
-                    <input type="text" class="title" maxlength="90" placeholder="Ex.: Execelente casa em ..." />
+        </nav>
 
-                    <label>Descrição:</label>
-                    <input type="text" maxlength="100" class="description"
-                        placeholder="Ex.: Uma boa casa, confortável..." />
-
-                    <label>Quartos:</label>
-                    <input type="number" class="rooms" placeholder="Ex.: 5" />
-
-                    <label>vagas na garagem:</label>
-                    <input type="number" class="parking" placeholder="Ex.: 6" />
-
-                    <label>Área total (m2):</label>
-                    <input type="number" class="total-area" placeholder="Ex.: 2000" />
-
-                    <label>Área construída(m2):</label>
-                    <input type="number" class="building" placeholder="Ex.: 1100" />
-
-                    <label>localidade:</label>
-                    <input type="text" class="locality" placeholder="Ex.: Crateús/CE" />
-
-                    <label>Preço $:</label>
-                    <input type="number" class="price" placeholder="Ex.: 50000" />
-
-                    <label>Imagem (URL):</label>
-                    <input type="url" class="link" placeholder="Ex.: https://www.exemplo.com/imagem.jpg" />
-                    <div class="buttons">
-                        <input type="submit" value="Inserir" class="btns">
-                        <input type="reset" value="Limpar" class="btns">
-                    </div>
-                </form>
-            </div>
+    </header>
+    <div class="container ">
+       
+        <div class="row mt-5">
+            <h1>Bem vindo(a) à JR Propriedades!</h1>
+            <h5>O Mercado imobiliário Pede inovação E AGORA você Pode Dar A Resposta. Entre para Imobiliária JR
+                Propriedades sem sair de casa agora mesmo.</h5>
         </div>
-
-    </section>
-    <span class="adverts">0 Anúncios</span>
-
-    <div class="list">
-
+        <div class="row d-flex justify-content-center">
+            <img src="assets/img/logo0.png" class="img-fluid mt-5" style="width: 40%;">
+        </div>
     </div>
-    <script src="assets/js/script.js"></script>
+ 
+    <script src="assets/js/bootstrap.bundle.min.js" ></script>
+    <script src="assets/js/bootstrap.min.js" ></script>
 </body>
 
 </html>
