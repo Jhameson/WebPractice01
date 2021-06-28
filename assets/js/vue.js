@@ -1,3 +1,5 @@
+
+
 // const App ={
 //     data(){
 //         return{
@@ -6,5 +8,5 @@
 //         };
 //     },
 // };
-
-// Vue.createApp(App).mount("#app");
+// // 
+// Vue.createApp(App).mount("#div-anuncios");
