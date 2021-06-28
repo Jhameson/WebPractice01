@@ -7,88 +7,12 @@
     --font-color-light: #f1ecf0;
 }
 
-
+.grid{
+    background-color: rgb(231, 169, 127);
+    border: 2px solid #f1690e;
+}
 
 h1 {
     color: var(--primary-color-darker);
-}
-
-/* Gerais */
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
-.row{
-    margin: 0;
-}
-
-.container{
-    padding: 70px 0;
-}
-
-p, li{
-    color: var(--font-color-darker);
-    font-size: 14px;
-}
-
-/* Barra de navegação */
-
-header, .navbar{
-    background-color: var(--primary-color-darker);
-}
-
-#nav-container{
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-#logo{
-    width: 110px;
-}
-
-.navbar-brand{
-    padding: 0;
-    color: var(--font-color-light);
-}
-
-.navbar-brand:hover{
-    color: var(--font-color-light);
-}
-
-#navbar-links a{
-    color: var(--font-color-light);
-}
-
-.navbar-expand-lg .navbar-nav .nav-link{
-    padding: 1rem .8rem;
-}
-
-/* anuncuie aqui */
-
-#about-area{
-    background-color: #f9f9f9;
-}
-
-.main-title{
-    color: #444;
-    margin: 0 0 65px 0;
-    font-size: 40px;
-    text-align: center;
-}
-
-.about-title{
-    font-size: 17px;
-    color: #444;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-#about-list{
-    list-style: none;
-    padding-left: 0;
-}
-
-#about-list li{
-    line-height: 30px;
 }
 

@@ -1,30 +1,23 @@
-//capturando o elemento com class form
 const form = document.querySelector('.form');
 
-//seleciona os componentes
-const result = document.querySelector('.list');
-const contador = document.querySelector('.adverts');
+const anuncios = document.querySelector('#div-anuncios');
 
-//array de propriedades
-const properties = [];
+const propriedades = [];
+let anunciosJs;
 
-//Qual evento quer "escutar"?
-form.addEventListener('submit', function recebeEventoForm(event) {
-    //previne o evento padrão do navegador -> não permite enviar
-    event.preventDefault();
+function salvarAnuncio() {
 
-    //pega do formulário
-    const title = form.querySelector('.title');
-    const description = form.querySelector('.description');
-    const rooms = form.querySelector('.rooms');
-    const parking = form.querySelector('.parking');
-    const total_area = form.querySelector('.total-area');
-    const building = form.querySelector('.building');
-    const locality = form.querySelector('.locality');
-    const price = form.querySelector('.price');
-    const link = form.querySelector('.link');
+    const title = form.querySelector('.a-titulo');
+    const description = form.querySelector('.a-descricao');
+    const rooms = form.querySelector('.a-rooms');
+    const parking = form.querySelector('.a-parking');
+    const total_area = form.querySelector('.a-total-area');
+    const building = form.querySelector('.a-building');
+    const locality = form.querySelector('.a-locality');
+    const price = form.querySelector('.a-price');
+    const link = form.querySelector('.a-link');
 
-    properties.push({
+    propriedades.push({
         title: title.value,
         description: description.value,
         rooms: rooms.value,
@@ -33,39 +26,69 @@ form.addEventListener('submit', function recebeEventoForm(event) {
         building: building.value,
         locality: locality.value,
         price: price.value,
-        link: link.value
-    })
-
+        link: link.value,
+    });
     alert("Dados inseridos");
-    
-    result.innerHTML +=
-        `
-       <div class="box">
-        <h1 class="list-title">${title.value}</h3>
-            <div class="description-item">
-                <div>
-                    <span class="span-description">Descrição: ${description.value}</span>
-                    <span class="span-description">Quartos: ${rooms.value}</span>
-                    <span class="span-description"> Vagas de Garagem: ${parking.value}</span>
-                    <span class="span-description"> Área do Terreno: ${total_area.value}</span>
-                    <span class="span-description"> Área Construída: ${building.value}</span>
-                    <span class="span-description"> Localidade: ${locality.value}</span>
-                    <span class="span-description"> Preço: R$${price.value}</span>
-     
+
+    anunciosJs = JSON.stringify(propriedades);
+    localStorage.setItem('Anuncios', anunciosJs);
+
+}
+
+
+
+
+
+function exibirAnuncios() {
+    const ads = localStorage.getItem('Anuncios');
+    const props = JSON.parse(ads);
+
+    let indice = 0;
+    for (let ads in props) {
+        anuncios.innerHTML +=
+            `
+        <div class="row border rounded p-3">
+            <div class="col-12 text-center">
+                ${props[indice].title}
+            </div>
+            <div class="col-6">
+
+                <div class="col-6">
+                    <label class="form-label">Descrição: ${props[indice].description}</label>
                 </div>
-                <img src="${link.value}" alt="Foto da propriedade"/>
+
+                <div class="col-6">
+                    <label class="form-label">Quartos: ${props[indice].rooms}</label>
+                </div>
+
+                <div class="col-6">
+                    <label for="inputAddress2" class="form-label">Vagas na garagem: ${props[indice].parking} </label>
+                </div>
+
+                <div class="col-6">
+                    <label for="inputCity" class="form-label">Área Total (m2): ${props[indice].total_area}</label>
+                </div>
+
+                <div class="col-6">
+                    <label for="inputCity" class="form-label">Área Construída: ${props[indice].building}</label>
+                </div>
+
+                <div class="col-6">
+                    <label for="inputCity" class="form-label">Localidade: ${props[indice].locality}</label>
+                </div>
+
+                <div class="col-6">
+                    <label for="inputCity" class="form-label">Preço (R$): ${props[indice].price}</label>
+                </div>
+
+            </div>
+            <div class="col-6  d-flex justify-content-center">
+                <img src="${props[indice].link}" class="img-fluid">
             </div>
         </div>
        `;
-    contador.innerHTML = `Anúncios: ${properties.length}`;
-});
+        indice++;
+    }
+} exibirAnuncios();
 
 
-// function limpar() {
-//     while (properties.length > 0) {
-//         properties.pop();
-//     }
-//     const clean = document.querySelector('.list');
-//     clean.innerHTML = '';
-//     contador.innerHTML = '0 Anúncios'
-// }
