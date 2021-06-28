@@ -11,8 +11,8 @@
     <title>JR Propriedades</title>
 
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
-    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../../assets/js/bootstrap.min.js"></script>
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    
 </head>
 
 <body class="gray-200">
@@ -50,6 +50,7 @@
         <div class="row">
             <div class="col-12 text-center border-bottom">
                 <h2 class="p-2">Anúncios</h2>
+               
             </div>
         </div>
 
@@ -57,11 +58,53 @@
     </div>
 
     <div class="container" id="div-anuncios">
-        {{title}}
+        <div class="row border rounded p-3" v-for="ads in anuncios">
+            <div class="col-12 text-center">
+                <h3> {{ads.titulo}} </h3>
+            </div>
+            <div class="col-6">
+
+                <div class="col-6">
+                    <label class="form-label">Descrição: {{ads.descricao}}</label>
+                </div>
+
+                <div class="col-6">
+                    <label class="form-label">Quartos: {{ads.quartos}}</label>
+                </div>
+
+                <div class="col-6">
+                    <label for="inputAddress2" class="form-label">Vagas na garagem:{{ads.vagas}} </label>
+                </div>
+
+                <div class="col-6">
+                    <label for="inputCity" class="form-label">Área Total (m2): {{ads.area}}</label>
+                </div>
+
+                <div class="col-6">
+                    <label for="inputCity" class="form-label">Área Construída: {{ads.construida}}</label>
+                </div>
+
+                <div class="col-6">
+                    <label for="inputCity" class="form-label">Localidade: {{ads.localidade}}</label>
+                </div>
+
+                <div class="col-6">
+                    <label for="inputCity" class="form-label">Preço (R$): {{ads.preco}}</label>
+                </div>
+
+            </div>
+            <div class="col-6  d-flex justify-content-center">
+                <img :src="ads.img" class="img-fluid">
+            </div>
+        </div>
+      
     </div>
-    <script src="../../assets/js/vue.global.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
     <script src="../../assets/js/vue.js"></script>
-    <script src="../../assets/js/render.js"></script>
 
 </body>
 

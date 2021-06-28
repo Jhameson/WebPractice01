@@ -10,8 +10,8 @@
     <title>JR Propriedades</title>
 
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
-    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../../assets/js/bootstrap.min.js"></script>
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    
 </head>
 
 <body class="gray-200">
@@ -52,67 +52,75 @@
 
             </div>
         </div>
-        <div class="row mt-2 mb-5">
+        <div class="row mt-2 mb-5 " >
             <div class="col-12 text-center">
                 <h2>Anuncie Aqui</h2>
             </div>
 
-            <form class="row g-3 form ">
+            <form class="row g-3 form " id="div-anuncios">
                 <div class="col-12 ">
                     <label class="form-label">Título: </label>
-                    <input required type="text" class="form-control a-titulo" 
-                    placeholder="Ex.: Casa Grande para venda" v-model="">
+                    <input required type="text" class="form-control a-titulo" placeholder="Ex.: Casa Grande para venda"
+                        v-model="KeyAnuncio.titulo">
                 </div>
 
                 <div class="col-12">
                     <label class="form-label">Descrição:</label>
                     <input required type="text" class="form-control a-descricao"
-                        placeholder="Ex.: Execelente e ventilada casa...">
+                        placeholder="Ex.: Execelente e ventilada casa..." v-model="KeyAnuncio.descricao">
                 </div>
                 <div class="col-md-3">
                     <label class="form-label ">Quartos: </label>
-                    <input required type="number" class="form-control a-rooms" placeholder="Ex.: 4">
+                    <input required type="number" class="form-control a-rooms" placeholder="Ex.: 4"
+                        v-model="KeyAnuncio.quartos">
                 </div>
                 <div class="col-md-3">
                     <label for="inputAddress2" class="form-label ">Vagas na garagem: </label>
-                    <input required type="number" class="form-control a-parking" placeholder="Ex.: 5">
+                    <input required type="number" class="form-control a-parking" placeholder="Ex.: 5"
+                        v-model="KeyAnuncio.vagas">
                 </div>
                 <div class="col-md-3">
                     <label for="inputCity" class="form-label ">Área Total (m2):</label>
-                    <input required type="number" class="form-control a-total-area" placeholder="Ex.: 2000">
+                    <input required type="number" class="form-control a-total-area" placeholder="Ex.: 2000"
+                        v-model="KeyAnuncio.area">
                 </div>
                 <div class="col-md-3">
                     <label for="inputCity" class="form-label ">Área Construída:</label>
-                    <input required type="number" class="form-control a-building" placeholder="Ex.: 1800">
+                    <input required type="number" class="form-control a-building" placeholder="Ex.: 1800"
+                        v-model="KeyAnuncio.construida">
                 </div>
                 <div class="col-12">
                     <label for="inputCity" class="form-label ">Localidade:</label>
-                    <input required class="form-control a-locality" placeholder="Ex.: Rua Seu joão">
+                    <input required class="form-control a-locality" placeholder="Ex.: Rua Seu joão"
+                        v-model="KeyAnuncio.localidade">
                 </div>
                 <div class="col-sm-6">
                     <label for="inputCity" class="form-label ">Preço (R$):</label>
-                    <input required type="number" class="form-control a-price" placeholder="Ex.: 2500">
+                    <input required type="number" class="form-control a-price" placeholder="Ex.: 2500"
+                        v-model="KeyAnuncio.preco">
                 </div>
                 <div class="col-sm-6">
                     <label for="inputCity" class="form-label ">Imagem:</label>
-                    <input required type="url" class="form-control a-link" placeholder="Ex.: link.com">
+                    <input required type="url" class="form-control a-link"
+                     placeholder="Ex.: link.com" v-model="KeyAnuncio.img" min="1">
                 </div>
                 <div class="col-12 d-flex justify-content-center mt-5">
-                    <input type="reset" class="btn btn-secondary btn-lg btn-enviar m-2" value="Limpar Campos" />
-                    <input type="submit" onclick="salvarAnuncio()" class="btn btn-primary btn-lg btn-enviar m-2"
-                        value="Enviar Anúncio" />
+                    <input type="reset" class="btn btn-secondary btn-lg btn-enviar m-2" value="Limpar Campos"/>
+                    <input class="btn btn-primary btn-lg btn-enviar m-2" type="submit"
+                        v-on:click="salvarAnuncio(KeyAnuncio)" value="Salvar Anuncio" />
                 </div>
             </form>
         </div>
 
     </div>
-    <div class="container" id="div-anuncios">
 
-    </div>
-    <script src="../../assets/js/vue.global.js"></script>
- 
-    <script src="../../assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
+    <script src="../../assets/js/bootstrap.bundle.min.js" ></script>
+    <script src="../../assets/js/bootstrap.min.js" ></script>
+
+    <script src="../../assets/js/vue.js"></script>
+    
 </body>
 
 </html>
