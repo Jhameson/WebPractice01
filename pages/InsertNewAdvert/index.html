@@ -61,7 +61,8 @@
                 <div class="col-12 ">
                     <label class="form-label">Título: </label>
                     <input required type="text" class="form-control a-titulo" placeholder="Ex.: Casa Grande para venda"
-                        v-model="KeyAnuncio.titulo">
+                        v-model="KeyAnuncio.titulo"> 
+                        <!-- manipular os dados anuncio e a chave do anuncio-->
                 </div>
 
                 <div class="col-12">
@@ -72,22 +73,22 @@
                 <div class="col-md-3">
                     <label class="form-label ">Quartos: </label>
                     <input required type="number" class="form-control a-rooms" placeholder="Ex.: 4"
-                        v-model="KeyAnuncio.quartos">
+                        v-model="KeyAnuncio.quartos" min="0" oninput="this.value = Math.abs(this.value)">
                 </div>
                 <div class="col-md-3">
                     <label for="inputAddress2" class="form-label ">Vagas na garagem: </label>
                     <input required type="number" class="form-control a-parking" placeholder="Ex.: 5"
-                        v-model="KeyAnuncio.vagas">
+                        v-model="KeyAnuncio.vagas" min="0" oninput="this.value = Math.abs(this.value)">
                 </div>
                 <div class="col-md-3">
                     <label for="inputCity" class="form-label ">Área Total (m2):</label>
                     <input required type="number" class="form-control a-total-area" placeholder="Ex.: 2000"
-                        v-model="KeyAnuncio.area">
+                        v-model="KeyAnuncio.area" min="0" oninput="this.value = Math.abs(this.value)">
                 </div>
                 <div class="col-md-3">
                     <label for="inputCity" class="form-label ">Área Construída:</label>
                     <input required type="number" class="form-control a-building" placeholder="Ex.: 1800"
-                        v-model="KeyAnuncio.construida">
+                        v-model="KeyAnuncio.construida" min="0" oninput="this.value = Math.abs(this.value)">
                 </div>
                 <div class="col-12">
                     <label for="inputCity" class="form-label ">Localidade:</label>
@@ -97,7 +98,7 @@
                 <div class="col-sm-6">
                     <label for="inputCity" class="form-label ">Preço (R$):</label>
                     <input required type="number" class="form-control a-price" placeholder="Ex.: 2500"
-                        v-model="KeyAnuncio.preco">
+                        v-model="KeyAnuncio.preco" min="0" oninput="this.value = Math.abs(this.value)">
                 </div>
                 <div class="col-sm-6">
                     <label for="inputCity" class="form-label ">Imagem:</label>
@@ -107,7 +108,7 @@
                 <div class="col-12 d-flex justify-content-center mt-5">
                     <input type="reset" class="btn btn-secondary btn-lg btn-enviar m-2" value="Limpar Campos"/>
                     <input class="btn btn-primary btn-lg btn-enviar m-2" type="submit"
-                        v-on:click="salvarAnuncio(KeyAnuncio)" value="Salvar Anuncio" />
+                        v-on:click.prevent="salvarAnuncio(KeyAnuncio)" value="Salvar Anuncio" />
                 </div>
             </form>
         </div>
